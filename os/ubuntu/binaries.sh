@@ -9,6 +9,9 @@ echo "Installing base ruby build dependencies ..."
 echo "Installing libraries for common gem dependencies ..."
   sudo apt-get -y install libxslt1-dev libcurl4-openssl-dev libksba8 libksba-dev libqtwebkit-dev libreadline-dev
 
+echo "Installing vim ..."
+  sudo apt-get -y install vim-gtk
+
 echo "Installing sqlite3 ..."
  sudo apt-get -y install libsqlite3-dev sqlite3
 
