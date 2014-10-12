@@ -6,8 +6,8 @@ lib="/usr/local/lib"
 bin="/usr/local/bin"
 
 # make in case they aren't already there
-mkdir -p "/usr/local/lib"
-mkdir -p "/usr/local/bin"
+sudo mkdir -p "/usr/local/lib"
+sudo mkdir -p "/usr/local/bin"
 
 # Copy the path
 sudo cp -R $dirname "$lib/"
@@ -18,7 +18,7 @@ if [ -e "$bin/dots" ]; then
 fi
 
 # symlink dots
-ln -s "$lib/dots/dots.sh" "$bin/dots"
+sudo ln -s "$lib/dots/dots.sh" "$bin/dots"
 
 # Ubuntu-only: Change from dash to bash
 if [ "$BASH_VERSION" = '' ]; then

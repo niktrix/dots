@@ -9,12 +9,12 @@ if test ! $(which brew); then
 fi
 
 echo "Update homebrew"
-  brew update && brew upgrade brew-cask
+  brew update
 
 echo "Installing GNU core utilities (those that come with OS X are outdated)"
   brew install coreutils
 
-echo "Installing GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed"
+echo "Installing GNU findutils"
   brew install findutils
 
 echo "Installing Bash 4"
@@ -59,6 +59,9 @@ echo "Installing watch, to execute a program periodically and show the output ..
 echo "Starting Postgres ..."
   brew services start postgres
 
+echo "Starting Redis ..."
+  brew services start redis
+
 echo "Installing rbenv, to change Ruby versions ..."
   brew install rbenv
 
@@ -96,9 +99,6 @@ echo "Configuring Bundler for faster, parallel gem installation ..."
 
 echo "Installing Rails ..."
   gem install rails -V
-
-echo "Installing GitHub CLI client ..."
-  brew install hub
 
 echo "Installing Phantom.js ..."
   brew install phantomjs
