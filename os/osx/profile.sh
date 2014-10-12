@@ -1,8 +1,9 @@
 ## Export PATH
 export PATH=/usr/local/bin:$HOME/bin:/usr/local/sbin:$PATH
 
-## Put brew's ruby in front
-export PATH=/usr/local/opt/ruby/bin:$PATH
+## load rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init - --no-rehash)"
 
 ## Use gnu tools instead
 export PATH=$(brew --prefix coreutils)/libexec/gnubin:$PATH
@@ -153,14 +154,11 @@ function port() {
 }
 
 ## gopen - open to own github
-
 function gopen() {
   open "https://github.com/techAPJ/${1}";
 }
 
-
 ## Open localhost
-
 function ol() {
   open "http://localhost:${1:-3000}"
 }
