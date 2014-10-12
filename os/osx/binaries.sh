@@ -23,6 +23,9 @@ echo "Installing Bash 4"
 echo "Install Git"
   brew install git
 
+echo "Installing GitHub CLI client ..."
+  brew_install 'gh'
+
 echo "Installing Postgres, a good open source relational database ..."
   brew install postgres --no-python
 
