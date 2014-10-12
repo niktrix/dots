@@ -78,6 +78,11 @@ echo "Installing Node.js ..."
   sudo add-apt-repository ppa:chris-lea/node.js
   sudo apt-get update
   sudo apt-get -y install nodejs
+  
+  echo "Installing golang"
+  sudo add-apt-repository ppa:duh/golang
+  sudo apt-get update
+  sudo apt-get install golang
 
 # Install Phantomjs
   # cd /usr/local/share
